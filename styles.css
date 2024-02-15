@@ -6,12 +6,13 @@
 
 body {
     background-color: black;
-    background-image:url(./assets/Component\ 1.png);
-    width: 100vw;           
+    background-image: url(./assets/Component\ 1.png);
+    width: 100vw;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+   
 }
 
 #logoheader {
@@ -49,22 +50,32 @@ button {
     background-color: black;
     border-color: white;
     border: 2px solid black;
-    /* Define a espessura e a cor da borda */
     outline: 5px solid white;
-    /* Define a espessura e a cor do contorno */
     padding: 10px 20px;
-    /* Ajusta o espaço interno do botão */
     border-radius: 5px;
     cursor: pointer;
     letter-spacing: 3px;
 }
 
-main {
+
+#inicio {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    position: relative;
+    animation: slideIn 1s forwards;
+    transition: transform 0.2s ease;
+}
 
+@keyframes slideIn {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
 }
 
 h1 {
@@ -85,6 +96,9 @@ div {
     height: 500px;
     background-color: white;
     display: block;
+}
+
+#inicio {
     margin-top: 150px;
 }
 
@@ -100,7 +114,6 @@ div {
     display: block;
     margin-left: 30px;
     margin-right: 30px;
-    margin-top: 150px;
 }
 
 #imgcamiseta {
@@ -113,7 +126,6 @@ div {
     width: 400px;
     height: 500px;
     background-color: white;
-    margin-top: 150px;
 }
 
 #imgbones {
@@ -129,24 +141,48 @@ div {
     font-size: 26px;
 }
 
+.zomm:active {
+    transform: scale(0.92);
+}
+
+.zomm:hover {
+    transform: scale(1.1);
+}
+
+
+
 @media screen and (max-width: 600px) {
+
+
+
+    body {
+        background-color: black;
+        background-image: url(./assets/Component\ 1.png);
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: center;
+    }
 
     /* Estilos para telas com largura máxima de 600px */
     #logoheader {
-        width: 60%;
+        width: 50%;
         margin-left: 22px;
         margin-top: 19px;
-    } 
-      .headericons {
-     display: none;
     }
+
+    .headericons {
+        display: none;
+    }
+
     button {
         font-family: 'Modak';
         color: white;
-        font-size: 24px;
-        width: 120px;
-        height: 70px;
-        margin-right:42px;
+        font-size: 14px;
+        width: 100px;
+        height: 55px;
+        margin-right: 42px;
         margin-left: 24px;
         margin-top: 28px;
         background-color: black;
@@ -160,88 +196,90 @@ div {
         border-radius: 5px;
         cursor: pointer;
         letter-spacing: 3px;
-}
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    }
+ #inicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center; 
+        margin-top: 10px;
 
-}
+    }
 
-h1 {
-    font-size: 22px;
-    color: white;
-    margin-top: -27px;
-    font-family: 'Roboto Flex', sans-serif;
+    h1 {
+        font-size: 22px;
+        color: white;
+        margin-top: -27px;
+        font-family: 'Roboto Flex', sans-serif;
 
-}
+    }
 
-div {
-    border-radius: 20px;
-    cursor: pointer;
-}
+    div {
+        border-radius: 20px;
+        cursor: pointer;
+    }
 
-#promocoes {
-    width: 300px;
-    height: 400px;
-    background-color: rgb(255, 255, 255);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px;
-    border-radius: 20px;
-   
-}
+    #promocoes {
+        width: 300px;
+        height: 400px;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        border-radius: 20px;
 
-#imgpromo {
-    width: 250px;
-    margin-top: 35px;
-    border-radius: 20px;
-}
+    }
 
-#camisetas {
-    width: 300px;
-    height: 400px;
-    background-color: rgb(255, 255, 255);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+    #imgpromo {
+        width: 250px;
+        margin-top: 35px;
+        border-radius: 20px;
+    }
 
-
-#imgcamiseta {
-    width: 240px;
-    border-radius: 20px;
-    margin-top: 24px;
-}
-
-#bones {
-    width: 300px;
-    height: 400px;
-    background-color: rgb(255, 255, 255);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-
-    border-radius: 20px;
-}
+    #camisetas {
+        width: 300px;
+        height: 400px;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 
 
-#imgbones {
-    width: 200px;
-    border-radius: 20px;
-    margin-top: 24px;
-} 
-#frase {
-    text-align: center;
-    margin-top: 2px;
-    padding: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 26px;
-}
+    #imgcamiseta {
+        width: 240px;
+        border-radius: 20px;
+        margin-top: 24px;
+    }
+
+    #bones {
+        width: 300px;
+        height: 400px;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+
+        border-radius: 20px;
+    }
+
+
+    #imgbones {
+        width: 200px;
+        border-radius: 20px;
+        margin-top: 24px;
+    }
+
+    #frase {
+        text-align: center;
+        margin-top: 2px;
+        padding: 30px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 26px;
+    }
 }

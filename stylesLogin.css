@@ -1,0 +1,59 @@
+#sectionLogin {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideIn 1s forwards;}
+   
+    @keyframes slideIn {
+        from {
+            left: -20%;
+        }
+    
+        to {
+            left: 50%;
+        }
+}
+
+#mainLogin {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    flex-direction: column;
+    padding: 0 20px;
+    border-radius: 20px;
+    margin-top: 300px;
+}
+#tituloLogin { color: black;
+    font-size: 34px; 
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+input {
+    width: 80%;
+    border-radius: 5px;
+    margin-top: 2px;
+    outline: none;
+    border: none;
+    background-color: #7777;
+    padding: 20px;
+}
+
+#buttonPagLogin {
+    width: 120px;
+    border: none;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+#CrieSuaConta { 
+    margin-top: 50px;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;}
